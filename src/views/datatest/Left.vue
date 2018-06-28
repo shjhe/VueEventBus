@@ -37,7 +37,7 @@ export default {
       this.messageList.unshift(`触发了修改test，值为${newRandom}`)
       setTimeout(() => {
         this.messageList.pop()
-      }, 5000);
+      }, 5000)
     }
   }
 }

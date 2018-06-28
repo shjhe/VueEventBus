@@ -15,6 +15,7 @@
 export default {
   computed: {
     test () {
+      // 这里也可以写一个方法获取，默认返回flobal对象
       return this.$eventBus.global.test
     }
   }
