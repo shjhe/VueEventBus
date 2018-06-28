@@ -4,7 +4,7 @@
       <el-menu-item-group>
         <template slot="title">分组一</template>
         <el-menu-item index="/">数据响应</el-menu-item>
-        <el-menu-item index="/12">选项2</el-menu-item>
+        <el-menu-item index="/function">事件响应</el-menu-item>
       </el-menu-item-group>
     </el-menu>
   </el-aside>

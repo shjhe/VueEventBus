@@ -9,6 +9,11 @@ export default new Router({
       path: '/',
       name: 'DataTest',
       component: () => import('@/views/datatest')
+    },
+    {
+      path: '/function',
+      name: 'FunctionTest',
+      component: () => import('@/views/functiontest')
     }
   ]
 })
