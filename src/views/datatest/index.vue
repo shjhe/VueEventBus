@@ -2,38 +2,31 @@
   <div class="data-test">
     <el-row>
       <el-col :span="10">
-        <el-button type="primary" @click="handleChange">修改数据</el-button>
+        <x-left />
       </el-col>
-      <el-col :span="10" :offset="4">
-        {{test}}
-        {{$eventBus.global.test}}
+      <el-col :span="4" class="arrow-content">
+        <i class="el-icon-d-arrow-right"></i>
+      </el-col>
+      <el-col :span="10">
+        <x-right />
       </el-col>
     </el-row>
   </div>
 </template>
 <script>
+import XLeft from './Left'
+import XRight from './Right'
 export default {
-  data () {
-    return {}
-  },
-  computed: {
-    test () {
-      return this.$eventBus.global && this.$eventBus.global.test
-    }
-  },
-  created () {
-    window.tyler = this
-    this.initEventBus()
-  },
-  methods: {
-    initEventBus () {
-      this.$eventBus.setData('test', {
-        a: '1'
-      })
-    },
-    handleChange () {
-      this.$eventBus.global.test.a = Math.random()
-    }
+  components: {
+    XLeft,
+    XRight
   }
 }
 </script>
+<style lang="scss" scoped>
+.arrow-content{
+  padding-top: 100px;
+  font-size: 40px;
+  text-align: center;
+}
+</style>
