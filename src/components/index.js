@@ -1,9 +1,9 @@
-import XLeft from './Left'
-import XRight from './Right'
+import VLeft from './Left'
+import VRight from './Right'
 
 const components = {
-  XLeft,
-  XRight
+  VLeft,
+  VRight
 }
 
 const install = function (Vue, opt = {}) {
@@ -14,6 +14,6 @@ const install = function (Vue, opt = {}) {
 
 export {
   install,
-  XLeft,
-  XRight
+  VLeft,
+  VRight
 }
