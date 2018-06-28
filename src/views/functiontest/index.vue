@@ -1,5 +1,10 @@
 <template>
   <div class="data-test">
+    <el-alert
+      :title="infoTitle"
+      type="warning"
+      :closable="false"
+      />
     <el-row>
       <el-col :span="10">
         <x-left />
@@ -20,6 +25,14 @@ export default {
   components: {
     XLeft,
     XRight
+  },
+  data () {
+    return {
+      infoTitle: ''
+    }
+  },
+  created () {
+    this.infoTitle = '需要注意的是：$on绑定事件后，在组件销毁时，需要解绑，否则下次进入时，会再次绑定，会触发多次'
   }
 }
 </script>

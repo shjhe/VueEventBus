@@ -22,12 +22,31 @@ export default {
     }
   },
   created () {
-    this.$eventBus.$on('function', (arg) => {
+    this.initEvent() // 初始化事件绑定
+  },
+  methods: {
+    initEvent () {
+      this.$eventBus.$on('function', (arg) => {
+        this.handleFunction(arg)
+      })
+    },
+    destroyEvent () {
+      this.$eventBus.$off('function')
+    },
+    handleFunction (arg) {
       this.eventList.unshift(`接收了function事件，参数值为${arg}`)
       setTimeout(() => {
         this.eventList.pop()
       }, 5000)
-    })
+    }
+  },
+  destroyed () {
+    // this.destroyEvent()
   }
 }
 </script>
+<style lang="scss" scoped>
+.el-alert{
+  margin-bottom: 15px;
+}
+</style>
