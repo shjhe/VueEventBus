@@ -1,9 +1,11 @@
 import VLeft from './Left'
 import VRight from './Right'
+import VSilderBar from './SilderBar'
 
 const components = {
   VLeft,
-  VRight
+  VRight,
+  VSilderBar
 }
 
 const install = function (Vue, opt = {}) {
@@ -15,5 +17,6 @@ const install = function (Vue, opt = {}) {
 export {
   install,
   VLeft,
-  VRight
+  VRight,
+  VSilderBar
 }
