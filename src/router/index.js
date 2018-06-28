@@ -8,7 +8,7 @@ export default new Router({
     {
       path: '/',
       name: 'DataTest',
-      component: () => import('@/views/DataTest')
+      component: () => import('@/views/datatest')
     }
   ]
 })
