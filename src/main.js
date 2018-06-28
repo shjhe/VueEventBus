@@ -5,10 +5,12 @@ import App from './App'
 import router from './router'
 import EventBus from './plugin/event-bus'
 
+import * as GlobalUI from '@/components'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
 Vue.use(ElementUI)
+Vue.use(GlobalUI)
 Vue.use(EventBus)
 
 Vue.config.productionTip = false
